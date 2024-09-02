@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Administracão de Funcionarios</title>
+</head>
+<body>
+    
+    <form id="formulario" class="conteudo">
+        <div id="for">
+            <h3>Adicionar Funcionario</h3>
+            <div class="abas"><div id="aba-2" class="aba" data-aba="pag" onclick="mostrarAba(this.id)">X</div></div>
+        </div>
+        <input type="text" id="nome" class="inp" placeholder="Seu Nome...">
+        <input type="email" id="email" class="inp" placeholder="Seu Email...">
+        <input type="number" id="idade" class="inp" placeholder="Sua Idade...">
+        <input type="text" id="moradia" class="inp"  placeholder="Seu Endereco...">
+        <input type="number" id="numero" class="inp" placeholder="Seu Numero...">
+        <input type="submit" name="acao" onclick="addTask()" value="Enviar">
+    </form>
+    
+    
+
+    <div id="pag"  class="conteudo ativa">
+
+        <div id="cabeca">
+
+        <h1>Administração de Funcionarios</h1>
+        <div class="abas"><div id="aba-1" class="aba ativa" data-aba="formulario" onclick="mostrarAba(this.id)">Novo Funcionario</div></div>
+        </div><!-- cabeca -->
+
+    <div class="container">
+
+        <div id="funcionarios">
+
+            <h2 id="bar">Funcionarios</h2>
+            <p>-----------------------------------</p>
+            <table>
+                <tbody id="func">
+                    <tr><td>jonh doe</td>
+                    <td><button id="btn2" class="btn btn-delete" onclick='deleteData(this)'>X</button></td>
+                    </tr>
+                    
+                    <!-- As linhas dos dados cadastrados serão adicionadas aqui dinamicamente -->
+                </tbody>
+            </table>
+            
+        </div><!-- funcionarios -->
+        
+        <div id="df">
+
+            <h2 id="bar">Detalhes do Funcionario</h2>
+            <p>-----------------------------------</p>
+            <img style="height: 250px;background-color: red;border-radius: 100%; cursor: pointer;" src="img/01.png" alt="cliente" onclick="abrirModal('img/01.png', 'Imagem do Funcionario')">
+            <div id="imf">
+            <p>Jonh Doe (30) <br>
+                 Monte Sossego <br>
+                john.doe@cv.com <br>
+                964645654
+             </p>
+            </div>
+            
+        </div><!-- df -->
+        
+    </div><!-- container -->
+
+    </div><!-- pag -->
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <img id="modal-img" src="" alt="imagem">
+            <p id="modal-description"></p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+

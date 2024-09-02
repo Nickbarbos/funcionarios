@@ -1,0 +1,249 @@
+
+:root {
+    --primary-color: rgb(255, 75, 75);
+    --secondary-color: rgba(255, 49, 49, 0.785);
+    --background-color: black;
+    --button-bg: rgb(0, 0, 0);
+    --button-text-color: white;
+    --error-color: red;
+    --hover-color: rgb(255, 83, 83);
+}
+
+body {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    font-family: Arial, sans-serif;
+}
+
+#pag {
+    border: 2px solid var(--secondary-color);
+    border-radius: 25px;
+    margin: 10px;
+    width: 100%;
+    padding: 30px;
+}
+
+#cabeca {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container {
+    display: flex;
+    border: 2px solid var(--secondary-color);
+    border-radius: 25px;
+    padding: 5px;
+    justify-content: space-between;
+}
+
+button {
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    height: 20px;
+    color: var(--primary-color);
+    background: transparent;
+    cursor: pointer;
+    padding: 5px;
+}
+
+#btn1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#btn2 {
+    color: var(--background-color);
+    background: transparent;
+    border: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#Registration-form {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    width: 100%;
+    max-width: 500px;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#button {
+    padding: 5px;
+    background-color: var(--button-bg);
+    border: 1px solid var(--button-bg);
+    border-radius: 8px;
+    color: var(--button-text-color);
+    font-size: large;
+    cursor: pointer;
+}
+
+.error-message {
+    color: var(--error-color);
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+tr {
+    border: 1px solid red;
+    background-color: #ff0000;
+    color: #000000;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+form {
+    background-color: white;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+form h3 {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+form input[type=text],
+form input[type=email],
+form input[type=number] {
+    height: 45px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    margin: 10px 0;
+}
+
+form input[type=submit] {
+    height: 40px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+form input[type=submit]:hover {
+    color: black;
+    transform: scale(1.05);
+    background-color: var(--hover-color);
+}
+
+form input:focus {
+    outline: none;
+}
+
+#for {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.abas {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.aba {
+    margin-right: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s, transform 0.5s, box-shadow 0.5s;
+}
+
+.aba:hover {
+    transform: scale(1.1);
+    background-color: rgb(255, 0, 0);
+    box-shadow: 0 2px 5px rgba(255, 0, 0, 0.5);
+    color: black;
+}
+
+.aba.ativa {
+    background-color: #000000;
+    color: #ff0000;
+}
+
+.conteudo {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: none;
+}
+
+.conteudo.ativa {
+    display: block;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: #ff0000;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    color: black;
+    position: relative;
+}
+
+.modal img {
+    max-width: 100%;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    #pag, #Registration-form {
+        width: 90%;
+        padding: 15px;
+    }
+
+    form {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+}
